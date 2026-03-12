@@ -13,11 +13,11 @@ export default defineConfig({
     port: 3000,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'https://botify-trades-server-mvp-production.up.railway.app',
         changeOrigin: true,
       },
       '/socket.io': {
-        target: 'http://localhost:5000',
+        target: 'https://botify-trades-server-mvp-production.up.railway.app',
         ws: true,
       },
     },

@@ -18,7 +18,7 @@ export function SocketProvider({ children }) {
     }
 
     const token = localStorage.getItem('accessToken');
-    const newSocket = io({
+    const newSocket = io('https://botify-trades-server-mvp-production.up.railway.app', {
       auth: { token },
       transports: ['websocket', 'polling'],
     });
